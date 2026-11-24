@@ -21,18 +21,39 @@
 /backend/src/main/resources/db/migration/V4__*              @member-4 @Ortinate
 
 # Member 5 — Dispatch & Runner Assignment Backend
-/backend/src/main/java/com/digiyak/dispatch/assignment/     @member-5 @Ortinate
-/backend/src/main/resources/db/migration/V5__*              @member-5 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/api/RunnerDispatchController.java    @member-5 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/api/DispatchDtos.java                @member-5 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/domain/DeliveryAssignment.java       @member-5 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/domain/RunnerProfile.java            @member-5 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/internal/AssignmentService.java      @member-5 @Ortinate
+/backend/src/main/resources/db/migration/V5__*                                   @member-5 @Ortinate
 
 # Member 6 — Live Tracking, Redis GEO & SSE Backend
-/backend/src/main/java/com/digiyak/dispatch/realtime/       @member-6 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/api/RunnerLocationController.java    @member-6 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/api/TrackingStreamController.java    @member-6 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/domain/DeliveryTrailPoint.java       @member-6 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/internal/RedisGeoRunnerService.java  @member-6 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/internal/RedisPubSubBroadcaster.java @member-6 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/internal/SseEmitterRegistry.java     @member-6 @Ortinate
+/backend/src/main/java/com/digiyak/dispatch/internal/TrailPersistenceService.java @member-6 @Ortinate
 
 # Member 7 — Finance Double-Entry Ledger & Cash Float Backend
-/backend/src/main/java/com/digiyak/finance/ledger/          @member-7 @Ortinate
-/backend/src/main/resources/db/migration/V6__*              @member-7 @Ortinate
+/backend/src/main/java/com/digiyak/finance/api/LedgerAuditController.java        @member-7 @Ortinate
+/backend/src/main/java/com/digiyak/finance/api/WalletController.java             @member-7 @Ortinate
+/backend/src/main/java/com/digiyak/finance/domain/Ledger*.java                   @member-7 @Ortinate
+/backend/src/main/java/com/digiyak/finance/internal/DoubleEntryLedgerService.java @member-7 @Ortinate
+/backend/src/main/java/com/digiyak/finance/internal/RunnerCashFloatService.java  @member-7 @Ortinate
+/backend/src/main/java/com/digiyak/finance/internal/TwoWaySplitService.java      @member-7 @Ortinate
+/backend/src/main/resources/db/migration/V6__*                                   @member-7 @Ortinate
 
 # Member 8 — MoMo Gateway & Payouts Backend
-/backend/src/main/java/com/digiyak/finance/gateway/         @member-8 @Ortinate
+/backend/src/main/java/com/digiyak/finance/api/MockMoMoController.java           @member-8 @Ortinate
+/backend/src/main/java/com/digiyak/finance/api/PaymentWebhookController.java     @member-8 @Ortinate
+/backend/src/main/java/com/digiyak/finance/domain/PaymentIntent.java             @member-8 @Ortinate
+/backend/src/main/java/com/digiyak/finance/domain/Payout.java                    @member-8 @Ortinate
+/backend/src/main/java/com/digiyak/finance/internal/PaymentGateway.java          @member-8 @Ortinate
+/backend/src/main/java/com/digiyak/finance/internal/*MoMoGateway.java            @member-8 @Ortinate
+/backend/src/main/java/com/digiyak/finance/internal/PayoutDisbursementService.java @member-8 @Ortinate
 
 # Member 9 — Frontend Core, PWA & Shared Campus Map
 /frontend/package.json                                      @member-9 @Ortinate
