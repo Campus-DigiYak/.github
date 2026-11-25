@@ -26,14 +26,16 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 26
           cache: pnpm
           cache-dependency-path: frontend/pnpm-lock.yaml
 
-      - name: Install & Build
+      - name: Install, Lint, Typecheck & Build
         run: |
           if [ -s package.json ]; then
             pnpm install --frozen-lockfile || pnpm install
+            pnpm run lint
+            pnpm run typecheck
             pnpm run build
           else
             echo "Frontend package.json not initialized yet — skipping build."
